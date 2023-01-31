@@ -2,6 +2,9 @@
 {
     public class BaseModel
     {
+        /// <summary>
+        /// Номер Темы
+        /// </summary>
         public int TopicId { get; set; }
 
         public int TaskId { get; set; }
