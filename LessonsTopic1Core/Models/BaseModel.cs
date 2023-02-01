@@ -11,9 +11,11 @@
 
         public string? TitleTopic { get; set; }
 
-        public string? TaskTitle { get; set; }
+        public string? TitleLesson { get; set; }
 
-        public string? TaskText { get; set; }
+        public string? TitleTask { get; set; }
+
+        public string? TextTask { get; set; }
 
         /// <summary>
         /// Выводит на экран номер урока и задание
@@ -21,8 +23,8 @@
         public void WritelineTask()
         {
             Console.WriteLine();
-            Console.WriteLine($"Урок {TopicId}: {TaskTitle}");
-            Console.WriteLine($"Задание: {TaskText}");
+            Console.WriteLine($"Урок {TopicId}: {TitleTask}");
+            Console.WriteLine($"Задание: {TextTask}");
         }
 
         public int CheckInputPositiveNumber()

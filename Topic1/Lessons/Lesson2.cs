@@ -14,9 +14,9 @@ namespace Lessons.Topic1.Lessons
     {
         public Lesson2() : base() 
         {
-            TopicId = 2;  
-            TaskTitle = "Познакомиться с типами данных.";  
-            TaskText = "Напишите код, который будет:";  
+            TopicId = 2;
+            TitleTask = "Познакомиться с типами данных.";
+            TextTask = "Напишите код, который будет:";  
         }
 
         /// <summary>
