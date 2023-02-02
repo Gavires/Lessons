@@ -15,8 +15,14 @@ namespace Lessons
             //var lesson3 = new Lesson3();
             //lesson3.OutputSolutionOfTask3();
 
-            var lesson4 = new Lesson4();
-            lesson4.OutputSolutionOfTask4();
+            //var lesson4 = new Lesson4();
+            //lesson4.OutputSolutionOfTask4();
+
+            //var lesson5 = new Lesson5();
+            //lesson5.OutputSolutionOfTask5();
+
+            var lesson6 = new Lesson6();
+            lesson6.OutputSolutionOfTask6();
         }
     }
 }
