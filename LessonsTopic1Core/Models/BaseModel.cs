@@ -35,12 +35,47 @@
             {
                 Console.WriteLine("Введите неотрицательное число");
                 isValid = int.TryParse(Console.ReadLine(), out number);
-                if (!isValid)
-                {
-                    Console.WriteLine("Неверный ввод!!!");
-                }
+                Valid(isValid);
             } while (!isValid || number < 0);
+
             return number;
+        }
+
+        public double CheckInputValidDoubleNumber()
+        {
+            double number;
+            bool isValid;
+            do
+            {
+                Console.WriteLine("Введите неотрицательное число");
+                isValid = double.TryParse(Console.ReadLine(), out number);
+                Valid(isValid);
+            } while (!isValid || number < 0);
+
+            return number;
+        }
+
+        public string CheckInputValidString()
+        {
+            string str;
+            bool isValid;
+            do
+            {
+                str = Console.ReadLine();
+                isValid = !string.IsNullOrEmpty(str);
+                Valid(isValid);
+
+            } while (!isValid);
+
+            return str;
+        }
+
+        private void Valid(bool valid)
+        {
+            if (!valid)
+            {
+                Console.WriteLine("Неверный ввод!!!");
+            }
         }
     }
 }
