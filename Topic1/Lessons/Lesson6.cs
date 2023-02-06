@@ -24,24 +24,23 @@ namespace Lessons.Topic1.Lessons
             Console.WriteLine($"Задача 6: результат = {SummNumbers()}");
         }
 
-        public double SummNumbers()
+        private double SummNumbers()
         {
             Console.WriteLine("Ввод числа");
             var summ = 0.0;
-            var b = 0.0;
+            double b;
             do
             {
                 b = CheckInputValidDoubleNumber();
                 summ += b;
             } while (b != 0);
-
-            //var a = CheckInputValidDoubleNumber();
-            //while ( a != 0)
-            //{
-            //    summ += a;
-            //    a = CheckInputValidDoubleNumber();
-            //}
             return summ;
+        }
+
+        private double DepositPercentage()
+        {
+
+            return 0.0;
         }
 
     }

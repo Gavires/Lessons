@@ -35,7 +35,7 @@ namespace Lessons.Topic1.Lessons
         private bool IsLeapYear()
         {
             Console.WriteLine("Подзадача 4.2:");
-            var year = CheckInputPositiveNumber();
+            var year = CheckInputPositiveIntNumber();
             if (year % 4 == 0)
             {
                 if (year % 100 == 0)

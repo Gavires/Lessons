@@ -27,7 +27,7 @@
             Console.WriteLine($"Задание: {TextTask}");
         }
 
-        public int CheckInputPositiveNumber()
+        public int CheckInputPositiveIntNumber()
         {
             int number;
             bool isValid;

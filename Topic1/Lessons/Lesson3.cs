@@ -26,7 +26,7 @@ namespace Lessons.Topic1.Lessons
         {
             WritelineTask();
             Console.WriteLine($"Подзадача 1: результат: {CheckString()}");
-            Console.WriteLine($"Подзадача 2: результат: {DetermineSeasons(CheckInputPositiveNumber())}");
+            Console.WriteLine($"Подзадача 2: результат: {DetermineSeasons(CheckInputPositiveIntNumber())}");
         }
 
         private string CheckString()
