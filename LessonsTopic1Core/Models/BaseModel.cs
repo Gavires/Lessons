@@ -1,4 +1,6 @@
-﻿namespace Lessons.LessonsTopic1Core.Models
+﻿using System.ComponentModel;
+
+namespace Lessons.LessonsTopic1Core.Models
 {
     public class BaseModel
     {
@@ -27,12 +29,16 @@
             Console.WriteLine($"Задание: {TextTask}");
         }
 
-        public int CheckInputPositiveIntNumber()
+        public int CheckInputPositiveIntNumber(string write = "")
         {
             int number;
             bool isValid;
             do
             {
+                if (!string.IsNullOrEmpty(write))
+                {
+                    Console.WriteLine(write);
+                }
                 Console.WriteLine("Введите неотрицательное число");
                 isValid = int.TryParse(Console.ReadLine(), out number);
                 Valid(isValid);
@@ -41,12 +47,16 @@
             return number;
         }
 
-        public double CheckInputValidDoubleNumber()
+        public double CheckInputValidDoubleNumber(string write = "")
         {
             double number;
             bool isValid;
             do
             {
+                if (!string.IsNullOrEmpty(write))
+                {
+                    Console.WriteLine(write);
+                }                
                 Console.WriteLine("Введите неотрицательное число");
                 isValid = double.TryParse(Console.ReadLine(), out number);
                 Valid(isValid);

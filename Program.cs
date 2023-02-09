@@ -21,10 +21,10 @@ namespace Lessons
             //var lesson5 = new Lesson5();
             //lesson5.OutputSolutionOfTask5();
 
-            //var lesson6 = new Lesson6();
-            //lesson6.OutputSolutionOfTask6();
+            var lesson6 = new Lesson6();
+            lesson6.OutputSolutionOfTask6();
 
-            
+
         }
     }
 }
