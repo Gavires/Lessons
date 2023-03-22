@@ -26,7 +26,7 @@ namespace Lessons.LessonsTopic1Core.Models
         {
             Console.WriteLine();
             Console.WriteLine($"Урок {TopicId}: {TitleTask}");
-            Console.WriteLine($"Задание: {TextTask}");
+            Console.WriteLine($"Задание: \n{TextTask}");
         }
 
         public int CheckInputPositiveIntNumber(string write = "")
