@@ -1,4 +1,5 @@
 ﻿using Lessons.LessonsTopic1Core.Models;
+using Lessons.LessonsTopic1Core.Validations;
 
 namespace Lessons.Topic1.Lessons
 {
@@ -10,7 +11,9 @@ namespace Lessons.Topic1.Lessons
 
         private string[] Seasons { get; } = { "Весна", "Лето", "Осень", "Зима" };
 
-        public Lesson3() : base()
+        public ValidationMethods _validationMethods { get; set; }
+
+        public Lesson3(ValidationMethods validationMethods) : base()
         {
             TopicId = 3;
             TitleTask = "Познакомиться с конструкциями и условными выражениями";
@@ -20,13 +23,14 @@ namespace Lessons.Topic1.Lessons
                        "/////////" +
                        "Напиши программу, которая будет принимать число и выводить период года (весна, лето, осень или зима). " +
                        "То есть, пользователь вводит 5 и на экран выводится “Весна”.";
+            _validationMethods = validationMethods;
         }
 
         public void OutputSolutionOfTask3()
         {
             WritelineTask();
             Console.WriteLine($"Подзадача 1: результат: {CheckString()}");
-            Console.WriteLine($"Подзадача 2: результат: {DetermineSeasons(CheckInputPositiveIntNumber())}");
+            Console.WriteLine($"Подзадача 2: результат: {DetermineSeasons(_validationMethods.CheckInputPositiveIntNumber())}");
         }
 
         private string CheckString()
@@ -49,7 +53,7 @@ namespace Lessons.Topic1.Lessons
             {
                 numberSeasons -= 4;
             }
-            return Seasons[numberSeasons - 1 ];
+            return Seasons[numberSeasons - 1];
         }
     }
 }
