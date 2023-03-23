@@ -8,7 +8,7 @@ namespace Lessons.Topic1.Lessons
     {
         private string YesLeapYear { get; set; } = "Введенный год високосный";
 
-        private string NoLeapYear { get; set; } = "Введенный год не является високосный";
+        private string NoLeapYear { get; set; } = "Введенный год не является високосным";
 
         public ValidationMethods _validationMethods { get; set; }
 
@@ -31,10 +31,7 @@ namespace Lessons.Topic1.Lessons
             Console.WriteLine($"Подзадача 4.3: результат = {AreaOfFigure()}");
         }
 
-        private bool OutputTrue()
-        {
-            return (0 + 0 - 0) * 0 / 1 == 0;
-        }
+        private bool OutputTrue() => (0 + 0 - 0) * 0 / 1 == 0;
 
         private bool IsLeapYear()
         {
