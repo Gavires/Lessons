@@ -1,6 +1,4 @@
-﻿using System.ComponentModel;
-
-namespace Lessons.LessonsTopic1Core.Models
+﻿namespace Lessons.LessonsTopic1Core.Models
 {
     public class BaseModel
     {
@@ -27,65 +25,6 @@ namespace Lessons.LessonsTopic1Core.Models
             Console.WriteLine();
             Console.WriteLine($"Урок {TopicId}: {TitleTask}");
             Console.WriteLine($"Задание: \n{TextTask}");
-        }
-
-        public int CheckInputPositiveIntNumber(string write = "")
-        {
-            int number;
-            bool isValid;
-            do
-            {
-                if (!string.IsNullOrEmpty(write))
-                {
-                    Console.WriteLine(write);
-                }
-                Console.WriteLine("Введите неотрицательное число");
-                isValid = int.TryParse(Console.ReadLine(), out number);
-                Valid(isValid);
-            } while (!isValid || number < 0);
-
-            return number;
-        }
-
-        public double CheckInputValidDoubleNumber(string write = "")
-        {
-            double number;
-            bool isValid;
-            do
-            {
-                if (!string.IsNullOrEmpty(write))
-                {
-                    Console.WriteLine(write);
-                }                
-                Console.WriteLine("Введите неотрицательное число");
-                isValid = double.TryParse(Console.ReadLine(), out number);
-                Valid(isValid);
-            } while (!isValid || number < 0);
-
-            return number;
-        }
-
-        public string CheckInputValidString()
-        {
-            string str;
-            bool isValid;
-            do
-            {
-                str = Console.ReadLine();
-                isValid = !string.IsNullOrEmpty(str);
-                Valid(isValid);
-
-            } while (!isValid);
-
-            return str;
-        }
-
-        private void Valid(bool valid)
-        {
-            if (!valid)
-            {
-                Console.WriteLine("Неверный ввод!!!");
-            }
         }
     }
 }

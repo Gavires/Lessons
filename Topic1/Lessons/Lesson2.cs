@@ -12,11 +12,11 @@ namespace Lessons.Topic1.Lessons
 {
     public class Lesson2 : BaseModel
     {
-        public Lesson2() : base() 
+        public Lesson2() : base()
         {
             TopicId = 2;
             TitleTask = "Познакомиться с типами данных.";
-            TextTask = "Напишите код, который будет:";  
+            TextTask = "Напишите код, который будет:";
         }
 
         /// <summary>
@@ -49,7 +49,7 @@ namespace Lessons.Topic1.Lessons
         public void OutputSolutionOfTask2()
         {
             WritelineTask();
-            Console.WriteLine($"Складывать два числа 51 и 18:\n результат = { SummNumber(51, 18)}");
+            Console.WriteLine($"Складывать два числа 51 и 18:\n результат = {SummNumber(51, 18)}");
             Console.WriteLine($"Вычитать из 132 63:\n результат = {DifferenceNumbers(132, 63)}");
             Console.WriteLine($"Умножить 7 на 2:\n результат = {ProductNumbers(7, 2)}");
             Console.ReadKey();
