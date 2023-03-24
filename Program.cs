@@ -1,5 +1,6 @@
 ﻿using Lessons.LessonsTopic1Core.Validations;
 using Lessons.Topic1.Lessons;
+using Lessons.Topic2.Lessons;
 
 namespace Lessons
 {
@@ -7,6 +8,7 @@ namespace Lessons
     {
         static void Main(string[] args)
         {
+            #region Topic1
             //var lesson1 = new Lesson1();
             //lesson1.OutputSolutionOfTask1();
 
@@ -24,7 +26,14 @@ namespace Lessons
 
             //var lesson6 = new Lesson6(new ValidationMethods());
             //lesson6.OutputSolutionOfTask6();
+            
+            #endregion
 
+            #region Topic2
+            var lesson7 = new Lesson7();
+            lesson7.OutputSolutionOfTask7();
+
+            #endregion
 
         }
     }
