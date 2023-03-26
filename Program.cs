@@ -30,8 +30,11 @@ namespace Lessons
             #endregion
 
             #region Topic2
-            var lesson7 = new Lesson7();
-            lesson7.OutputSolutionOfTask7();
+            //var lesson7 = new Lesson7();
+            //lesson7.OutputSolutionOfTask7();
+
+            var lesson8 = new Lesson8();
+            lesson8.OutputSolutionOfTask8();
 
             #endregion
 
