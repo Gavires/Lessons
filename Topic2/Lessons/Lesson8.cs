@@ -27,7 +27,7 @@ namespace Lessons.Topic2.Lessons
         {
             WritelineTask();
             Console.WriteLine("Задание 8.1: результат:");
-            WriteLineMassNormal(IntMass);
+            WriteLineArrayNormal(IntMass);
             Console.WriteLine("Задание 8.2: результат:");
             WriteLineMassNegative(IntMass);
             Console.WriteLine("Задание 8.3: результат:");
@@ -37,15 +37,7 @@ namespace Lessons.Topic2.Lessons
             Console.WriteLine("Задание 8.5: разультат:");
             WriteLineMassToZero(IntMass);
             Console.WriteLine("Задание 8.6: результат:");
-            WriteLineMassNormal(WriteLineMassEdit(IntMass));
-        }
-
-        private void WriteLineMassNormal(int[] intMass)
-        {
-            for (var i = 0; i < intMass.Length; i++)
-            {
-                Console.WriteLine($"\t\t\t{intMass[i]}");
-            }
+            WriteLineArrayNormal(WriteLineMassEdit(IntMass));
         }
 
         private void WriteLineMassNegative(int[] intMass)

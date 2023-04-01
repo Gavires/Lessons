@@ -26,5 +26,27 @@
             Console.WriteLine($"Урок {TopicId}: {TitleTask}");
             Console.WriteLine($"Задание: \n{TextTask}");
         }
+
+        public void WriteLineArrayNormal(int[] intMass, string str = "")
+        {
+            if (str != "")
+            {
+                Console.WriteLine(str);
+            }
+
+            for (var i = 0; i < intMass.Length; i++)
+            {
+                Console.WriteLine($"\t\t\t{intMass[i]}");
+            }
+        }
+
+        public int[] CopyToArray(int[] massFrom, int[] massTo)
+        {
+            for (var i = 0; i < massTo.Length; i++)
+            {
+                massTo[i] = massFrom[i];
+            }
+            return massTo;
+        }
     }
 }
