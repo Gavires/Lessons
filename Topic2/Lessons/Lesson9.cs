@@ -1,10 +1,11 @@
 ﻿using Lessons.LessonsTopic1Core.Models;
+using static System.Math;
 
 namespace Lessons.Topic2.Lessons
 {
     public class Lesson9 : BaseModel
     {
-        private int[] Mass = { 1, 3, 2, 56, 32, 11, 15, 46, 22 };
+        private int[] Mass = { 56, 3, 2, 56, 32, 11, 15, 46, 1 };
 
         public Lesson9() : base()
         {
@@ -15,8 +16,8 @@ namespace Lessons.Topic2.Lessons
                                     "Создать из них два массива: четный и нечетный.\n" +
                                     "Отсортировать эти массивы по возрастанию.\n" +
                        "Задача 9.2: Найти разницу между максимальным и минимальным элементами массива\n" +
-                       "Задача 9.3: Заполнить массив слуячайными числами от -50 до 50\n" +
-                                    "Определить вероятность попадания числа в промежуток от 15 до 15\n";
+                       "Задача 9.3: Заполнить массив случайными числами от -50 до 50\n" +
+                                    "Определить вероятность попадания числа в промежуток от -15 до 15\n";
         }
 
         public void OutputSolutionOfTask9()
@@ -24,6 +25,8 @@ namespace Lessons.Topic2.Lessons
             WritelineTask();
             Console.WriteLine("Задание 9.1: результат:");
             EditMass(Mass);
+            Console.WriteLine("------------------------");
+            Console.WriteLine($"Задание 9.2: результат: {DifferenceMaxMinElemInArray(Mass)}");
 
         }
 
@@ -78,6 +81,43 @@ namespace Lessons.Topic2.Lessons
                 }
             }
             return mass;
+        }
+
+        private int DifferenceMaxMinElemInArray(int[] mass)
+        {
+            int minElem = mass[0];
+            int maxElem = mass[0];
+            for (var i = 0; i < mass.Length; i++)
+            {
+                if (mass[i] < minElem)
+                {
+                    minElem = mass[i];
+                }
+                else if (mass[i] > maxElem)
+                {
+                    maxElem = mass[i];
+                }
+            }
+            return maxElem - minElem;
+        }
+
+        private int RandomMass(int length)
+        {
+            var sumElem = 0;
+            var random = new Random();
+            int[] mass = new int[length];
+            for (var i = 0; i < mass.Length; i++)
+            {
+                mass[i] = random.Next(-50, 50);
+                if (mass[i] >= -15 && mass[i] <= 15)
+                {
+                    sumElem += mass[i];
+                }
+                
+            }
+            var sigma = Sqrt(sumElem / (length - 1));
+
+            return 0;
         }
     }
 }
