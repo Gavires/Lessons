@@ -34,20 +34,40 @@
 
         public double CheckInputValidDoubleNumber(string write = "")
         {
+            double result;
+            do
+            {
+                result = CheckInputValidDoubleNumber(write, "Введите неотрицательное число");
+            } 
+            while (result < 0);
+            
+            return result;
+        }
+
+        public double InputValidDoubleNumber(string info = "Введите число")
+        {
             double number;
             bool isValid;
             do
             {
-                if (!string.IsNullOrEmpty(write))
+                if (!string.IsNullOrEmpty(info))
                 {
-                    Console.WriteLine(write);
+                    Console.WriteLine(info);
                 }
-                Console.WriteLine("Введите неотрицательное число");
                 isValid = double.TryParse(Console.ReadLine(), out number);
                 Valid(isValid);
-            } while (!isValid || number < 0);
-
+            } while (!isValid);
             return number;
+        }
+
+        private double CheckInputValidDoubleNumber(string write = "", string info = "")
+        {
+            if (!string.IsNullOrEmpty(write))
+            {
+                Console.WriteLine(write);
+            }
+
+            return InputValidDoubleNumber(info);
         }
 
         public string CheckInputValidString()

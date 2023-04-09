@@ -36,8 +36,11 @@ namespace Lessons
             //var lesson8 = new Lesson8();
             //lesson8.OutputSolutionOfTask8();
 
-            var lesson9 = new Lesson9();
-            lesson9.OutputSolutionOfTask9();
+            //var lesson9 = new Lesson9();
+            //lesson9.OutputSolutionOfTask9();
+
+            var lesson12 = new Lesson12(new ValidationMethods());
+            lesson12.OutputSolutionOfTask12();
 
             #endregion
 
